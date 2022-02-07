@@ -13,9 +13,9 @@ var SYMBOL3 = ['☺','☻','♥','♦','♣','♠','•','◘','○','♂','♀'
 var DECI = ['1','2','3','4','5','6','7','8','9']; //created an array of string numbers
 
 alert('Welcome to my password generator.');
-var a = prompt('How many Characters do you want your password to be? Minimum 8 max, 128. Enter a number.');
-var b = prompt('Would you like to use upper-case, lower-case, or a combination of both characters in your password, type: upper , lower , or both?');
-var c = prompt('Would you like to use symbols and special characters in your password? If so type yes or if not then type no.');
+var a = parseInt(prompt('How many Characters do you want your password to be? Minimum 8 max, 128. Enter a number.'));
+var b = confirm('Would you like to use upper-case, lower-case, or a combination of both characters in your password, type: upper , lower , or both?');
+var c = confirm('Would you like to use symbols and special characters in your password? If so type yes or if not then type no.');
 console.log(a,b,c); // this allows us to store the values of a b and c to answer the questions for minimum requirements
 /*
 Enter Updated code here
