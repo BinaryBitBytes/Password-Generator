@@ -14,24 +14,26 @@ var DECI = ['1','2','3','4','5','6','7','8','9']; //created an array of string n
 
 alert('Welcome to my password generator.');
 var a = parseInt(prompt('How many Characters do you want your password to be? Minimum 8 max, 128. Enter a number.'));
-var b = confirm('Would you like to use upper-case, lower-case, or a combination of both characters in your password, type: upper , lower , or both?');
-var c = confirm('Would you like to use symbols and special characters in your password? If so type yes or if not then type no.');
-console.log(a,b,c); // this allows us to store the values of a b and c to answer the questions for minimum requirements
+var b = confirm('Would you like to use upper-case?');
+var c = confirm('Would you like to use lower-case?');
+var d = confirm('Would you like to use symbols in your password?');
+var e = confirm('Would you like to use special characters in your password?');
+console.log(a,b,c,d,e); // this allows us to store the values of a b and c to answer the questions for minimum requirements
 /*
 Enter Updated code here
 */
 
 function writePassword() {
-  var password = generatePassword(); //parent variable liked to global function that generates password
+  const password = generatePassword(); //parent variable liked to global function that generates password
     function generatePassword(){ // defining the function below used to generate the password, this i child in the DOM within the genratePassword Function / variable password        
-        var randomDec = DECI[Math.floor(Math.random()*DECI.length)]; //using math random to declare a variable to generate array values from the list containing decimal strings
-        var randomWord1 = WORD1[Math.floor(Math.random()*WORD1.length)]; //using math random to declare a variable to generate array values from the list containing word strings list 1
-        var randomWord2 = WORD2[Math.floor(Math.random()*WORD2.length)];//using math random to declare a variable to generate array values from the list containing word strings list 2
-        var randomSymbol2 = SYMBOL2[Math.floor(Math.random()*SYMBOL2.length)];//using math random to declare a variable to generate array values from the list containing symbols list 2 to be different than symbols list 1 or 3
-        var randomSymbol3 = SYMBOL3[Math.floor(Math.random()*SYMBOL3.length)];//using math random to declare a variable to generate array values from the list containing symbols list 3 to be different than symbols list 1 or 2
-        var randomLower = LOWER[Math.floor(Math.random()*LOWER.length)];//using math random to declare a variable to generate array values from the list containing lowercase value
-        var randomUpper = UPPER[Math.floor(Math.random()*UPPER.length)];//using math random to declare a variable to generate array values from the list containing uppercase values
-        var randomSymbol = SYMBOL[Math.floor(Math.random()*SYMBOL.length)];;//using math random to declare a variable to generate array values from the list containing symbols
+        let randomDec = DECI[Math.floor(Math.random()*DECI.length)]; //using math random to declare a variable to generate array values from the list containing decimal strings
+        let randomWord1 = WORD1[Math.floor(Math.random()*WORD1.length)]; //using math random to declare a variable to generate array values from the list containing word strings list 1
+        let randomWord2 = WORD2[Math.floor(Math.random()*WORD2.length)];//using math random to declare a variable to generate array values from the list containing word strings list 2
+        let randomSymbol2 = SYMBOL2[Math.floor(Math.random()*SYMBOL2.length)];//using math random to declare a variable to generate array values from the list containing symbols list 2 to be different than symbols list 1 or 3
+        let randomSymbol3 = SYMBOL3[Math.floor(Math.random()*SYMBOL3.length)];//using math random to declare a variable to generate array values from the list containing symbols list 3 to be different than symbols list 1 or 2
+        let randomLower = LOWER[Math.floor(Math.random()*LOWER.length)];//using math random to declare a variable to generate array values from the list containing lowercase value
+        let randomUpper = UPPER[Math.floor(Math.random()*UPPER.length)];//using math random to declare a variable to generate array values from the list containing uppercase values
+        let randomSymbol = SYMBOL[Math.floor(Math.random()*SYMBOL.length)];;//using math random to declare a variable to generate array values from the list containing symbols
         value = [((Math.floor(randomDec))*(Math.round(randomDec)*randomDec))+randomUpper+randomSymbol3+
             (randomDec*randomDec)+randomLower+randomSymbol+randomWord2+
             randomSymbol3+randomUpper+randomWord1+randomUpper+randomDec+randomSymbol2];//My password generating algorithm
